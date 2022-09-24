@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
+// all the constants colours used
 const Color kScaffoldColor = Color(0xFFFFFFFF);
 const Color kPrimaryColor = Color(0xFF239B56);
 const Color kSecondaryColor = Color(0xFF28B463);
@@ -13,6 +14,7 @@ const Color kErrorBorderColor2 = Color(0xFFCB4335);
 const Color kFillColor = Color(0xFFF4F5F7);
 const Color kIconColor = Color(0xFF3E5481);
 
+//box sizes
 final kSizedBox1 = SizedBox(
   height: 1.h,
 );
@@ -21,6 +23,7 @@ final kSizedBox2 = SizedBox(
   height: 2.h,
 );
 
+//bug fixes for the format of program
 final screensDefaultPadding = EdgeInsets.only(left: 4.w, right: 4.w);
 
 final inputTextHintStyle = GoogleFonts.lato().copyWith(
@@ -29,6 +32,6 @@ final inputTextHintStyle = GoogleFonts.lato().copyWith(
   color: kTextPrimaryColor,
 );
 
-//validation for email
+//validation for email. credit to stackoverflow. it works.
 const String emailPattern =
     r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';

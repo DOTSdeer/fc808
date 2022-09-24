@@ -7,11 +7,12 @@ import 'package:fc3/screens/sign_up_screen/sign_up_screen.dart';
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
   static String routeName = 'SignInScreen';
-
+//constants of page
   @override
   State<SignInScreen> createState() => _SignInScreenState();
 }
 
+//focus is the button animations
 class _SignInScreenState extends State<SignInScreen> {
   final _formKey = GlobalKey<FormState>();
   final List<FocusNode> _focusNodes = [
@@ -21,7 +22,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    //
     for (var node in _focusNodes) {
       node.addListener(() {
         setState(() {});
@@ -30,6 +31,7 @@ class _SignInScreenState extends State<SignInScreen> {
     super.initState();
   }
 
+//this just builds the page
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -64,7 +66,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     kSizedBox2,
                     InkWell(
                       onTap: () {
-                        //go to forgot password screen
+                        //somebody has fogotten thier password, this directs to the forgot password area
                       },
                       child: Align(
                         alignment: Alignment.bottomRight,
@@ -82,9 +84,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     kSizedBox2,
                     CustomBtn(
                       onPress: () {
-                        //sign in
+                        //sign in but you actually cant, because.
                         if (_formKey.currentState!.validate()) {
-                          //go to home screen
+                          //back to home screen.
 
                         }
                       },
@@ -101,7 +103,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                         InkWell(
                           onTap: () {
-                            //go to sign up screen
+                            //sign up. more data for mining purposes :)
                             Navigator.pushNamed(
                                 context, SignUpScreen.routeName);
                           },
@@ -145,6 +147,7 @@ class _SignInScreenState extends State<SignInScreen> {
         if (value!.length < 4) {
           return 'Must be more than 4 characters';
         }
+        //validations of input
         return null;
       },
     );
@@ -169,6 +172,7 @@ class _SignInScreenState extends State<SignInScreen> {
         if (value!.length < 5) {
           return 'Must be more than 5 characters';
         }
+        //validations for password
         return null;
       },
     );

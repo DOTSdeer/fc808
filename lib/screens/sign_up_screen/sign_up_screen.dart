@@ -23,7 +23,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   void initState() {
-    // what is a init state? flutter is brittish now?
+    // what is a init state? is flutter from brittish descent?
     for (var node in _focusNodes) {
       node.addListener(() {
         setState(() {});

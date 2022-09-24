@@ -5,6 +5,7 @@ import 'package:sizer/sizer.dart';
 class CustomStack extends StatelessWidget {
   const CustomStack({Key? key}) : super(key: key);
 
+//the position of the circles, time sink moment.
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -136,6 +137,7 @@ class IntroBtn extends StatelessWidget {
   const IntroBtn({Key? key, required this.onPress}) : super(key: key);
   final VoidCallback onPress;
 
+//override to the next slide
   @override
   Widget build(BuildContext context) {
     return InkResponse(

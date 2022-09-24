@@ -6,6 +6,7 @@ import 'components/intro_components.dart';
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
   static String routeName = 'IntroScreen';
+  //front screen, initialisation
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +29,7 @@ class IntroScreen extends StatelessWidget {
           kSizedBox2,
           IntroBtn(
             onPress: () {
-              //go to next screen
+              //slide to the next screen
               Navigator.pushNamedAndRemoveUntil(
                   context, SignInScreen.routeName, (route) => false);
             },

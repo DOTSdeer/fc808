@@ -15,7 +15,9 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  // This widget initialises the program
+  // its settings of text, name, colour and size
+  //the "root" of the program. aparently.
   @override
   Widget build(BuildContext context) {
     return Sizer(
@@ -62,6 +64,7 @@ class MyApp extends StatelessWidget {
               labelStyle: inputTextHintStyle.copyWith(
                 color: kTextSecondaryColor,
               ),
+              //this is all for the front page circle thing, makes it looks cooler i swear, i learnt it from youtube:>
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: const BorderSide(
@@ -90,6 +93,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
+          //routes page to different sub page parts, ie the sign in and sign up
           initialRoute: IntroScreen.routeName,
           routes: <String, WidgetBuilder>{
             IntroScreen.routeName: (context) => IntroScreen(),
